@@ -2,12 +2,8 @@
 
 import { useState, useMemo } from "react";
 
-import { motion, AnimatePresence } from "framer-motion";
-
 import { getProductsByCategory } from "@/data/shop/products";
-import { filterGroups } from "@/types/filters";
-import type { Filter } from "@/types/filters";
-import type { Product } from "@/types/shop";
+import { filterGroups, type Filter } from "@/types/filters";
 
 import { CategoryNav } from "./_components/category-nav";
 import { FilterBar } from "./_components/filter-bar";
@@ -134,36 +130,16 @@ export default function ShopPage() {
         </div>
       </div>
       <div className="container mx-auto px-4 pb-20">
-        <motion.div layout className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
-          <AnimatePresence mode="popLayout">
-            {filteredProducts.map((product, idx) => (
-              <motion.div
-                key={product.id}
-                layout
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{
-                  duration: 0.35,
-                  ease: [0.19, 1, 0.22, 1],
-                  delay: (idx % 8) * 0.02,
-                }}
-              >
-                <ProductCard product={product} index={idx} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+          {filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
 
         {filteredProducts.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="flex min-h-[50vh] items-center justify-center"
-          >
+          <div className="flex min-h-[50vh] items-center justify-center">
             <p className="text-xs tracking-wide text-black/40 uppercase">NO PRODUCTS FOUND</p>
-          </motion.div>
+          </div>
         )}
       </div>
     </>
