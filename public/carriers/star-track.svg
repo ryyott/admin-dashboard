@@ -1,0 +1,6 @@
+<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" fill="#003DA5" rx="4"/>
+  <path d="M15,20 L18,14 L21,20 L15,20 Z" fill="#FFD700"/>
+  <text x="65" y="22" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">Star</text>
+  <text x="65" y="32" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">Track</text>
+</svg>
