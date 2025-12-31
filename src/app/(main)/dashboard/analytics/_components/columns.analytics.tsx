@@ -53,7 +53,8 @@ export const columns: ColumnDef<SalesUser>[] = [
     accessorKey: "revenue",
     header: ({ column }) => <DataTableColumnHeader column={column} title="Revenue" className="justify-end" />,
     cell: ({ row }) => {
-      const revenue = row.getValue("revenue");
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+      const revenue = row.getValue("revenue") as number;
       return <div className="text-right font-medium tabular-nums">${revenue.toLocaleString()}</div>;
     },
     enableSorting: true,
@@ -70,7 +71,8 @@ export const columns: ColumnDef<SalesUser>[] = [
     accessorKey: "kpi",
     header: ({ column }) => <DataTableColumnHeader column={column} title="KPI" className="justify-center" />,
     cell: ({ row }) => {
-      const kpi = row.getValue("kpi");
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+      const kpi = row.getValue("kpi") as number;
       const color =
         kpi >= 0.9
           ? "text-green-600 dark:text-green-500"
@@ -86,7 +88,8 @@ export const columns: ColumnDef<SalesUser>[] = [
     accessorKey: "winRate",
     header: ({ column }) => <DataTableColumnHeader column={column} title="Win Rate" className="justify-center" />,
     cell: ({ row }) => {
-      const winRate = row.getValue("winRate");
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+      const winRate = row.getValue("winRate") as number;
 
       return (
         <div className="flex justify-center">
