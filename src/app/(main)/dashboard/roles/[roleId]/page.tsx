@@ -55,7 +55,7 @@ export default function RoleDetailPage() {
         <div className="text-center">
           <h2 className="text-2xl font-bold">Role Not Found</h2>
           <p className="text-muted-foreground mt-2">The role you're looking for doesn't exist.</p>
-          <Button onClick={() => router.push("/page/roles")} className="mt-4">
+          <Button onClick={() => router.push("/dashboard/roles")} className="mt-4">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Roles
           </Button>
@@ -86,7 +86,7 @@ export default function RoleDetailPage() {
 
       <div className="flex flex-col gap-6 p-6">
         {/* Back Button */}
-        <Button variant="ghost" onClick={() => router.push("/page/roles")} className="w-fit">
+        <Button variant="ghost" onClick={() => router.push("/dashboard/roles")} className="w-fit">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Roles
         </Button>

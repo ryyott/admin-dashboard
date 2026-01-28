@@ -12,7 +12,7 @@ export default function ChatRedirectPage() {
   useEffect(() => {
     // Redirect to the first conversation
     if (mockConversations.length > 0) {
-      router.replace(`/page/chat/${mockConversations[0].id}`);
+      router.replace(`/dashboard/chat/${mockConversations[0].id}`);
     }
   }, [router]);
 

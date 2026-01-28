@@ -20,7 +20,7 @@ export default function InvoicesPage() {
   const [invoices] = useState<Invoice[]>(mockInvoices);
 
   const handleEdit = (invoice: Invoice) => {
-    router.push(`/page/invoices/${invoice.id}/edit`);
+    router.push(`/dashboard/invoices/${invoice.id}/edit`);
   };
 
   const handleDuplicate = (invoice: Invoice) => {
@@ -51,7 +51,7 @@ export default function InvoicesPage() {
             <FileDown className="size-4" />
             Export
           </Button>
-          <Button className="gap-2" onClick={() => router.push("/page/invoices/create")}>
+          <Button className="gap-2" onClick={() => router.push("/dashboard/invoices/create")}>
             <Plus className="size-4" />
             Create Invoice
           </Button>

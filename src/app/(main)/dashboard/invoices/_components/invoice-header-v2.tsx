@@ -77,7 +77,7 @@ export function InvoiceHeaderV2({
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
-                    <BreadcrumbLink onClick={() => router.push("/page/invoices")} className="cursor-pointer">
+                    <BreadcrumbLink onClick={() => router.push("/dashboard/invoices")} className="cursor-pointer">
                       Invoices
                     </BreadcrumbLink>
                   </BreadcrumbItem>

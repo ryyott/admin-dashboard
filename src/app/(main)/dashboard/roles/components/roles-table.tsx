@@ -171,7 +171,7 @@ export function RolesTable({ roles }: RolesTableProps) {
   });
 
   const handleRowClick = (role: Role) => {
-    router.push(`/page/roles/${role.id}`);
+    router.push(`/dashboard/roles/${role.id}`);
   };
 
   return (

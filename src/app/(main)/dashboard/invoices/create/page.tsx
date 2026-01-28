@@ -220,7 +220,7 @@ export default function CreateInvoicePageOnboarding() {
       setIsSaving(false);
       setHasUnsavedChanges(false);
       toast.success("Invoice saved as draft");
-      router.push("/page/invoices");
+      router.push("/dashboard/invoices");
     }, 1000);
   };
 
@@ -254,7 +254,7 @@ export default function CreateInvoicePageOnboarding() {
       setIsSaving(false);
       setHasUnsavedChanges(false);
       toast.success("Invoice sent successfully");
-      router.push("/page/invoices");
+      router.push("/dashboard/invoices");
     }, 1000);
   };
 
@@ -279,7 +279,7 @@ export default function CreateInvoicePageOnboarding() {
         onSharePaymentLink={() => toast.info("Payment link functionality coming soon")}
         onDelete={() => {
           if (confirm("Are you sure you want to delete this invoice?")) {
-            router.push("/page/invoices");
+            router.push("/dashboard/invoices");
           }
         }}
       />

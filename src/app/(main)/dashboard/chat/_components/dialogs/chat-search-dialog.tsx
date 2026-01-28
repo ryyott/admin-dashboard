@@ -32,7 +32,7 @@ export function ChatSearchDialog({ open, onOpenChange, conversations, users }: C
   );
 
   const handleSelectConversation = (conversationId: string) => {
-    router.push(`/page/chat/${conversationId}`);
+    router.push(`/dashboard/chat/${conversationId}`);
     onOpenChange(false);
     setSearchQuery("");
     setSelectedIndex(0);

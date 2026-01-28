@@ -51,7 +51,7 @@ export function RoleCard({ role, index }: RoleCardProps) {
     if (target.closest("button") || target.closest("[role='checkbox']") || target.closest("[role='menuitem']")) {
       return;
     }
-    router.push(`/page/roles/${role.id}`);
+    router.push(`/dashboard/roles/${role.id}`);
   };
 
   const handleCheckboxChange = (checked: boolean) => {
