@@ -75,10 +75,10 @@ export function ConversationList({ conversations, users, currentUser, activeConv
   const renderContent = () => {
     if (filter === "personal") {
       return (
-        <div className="space-y-1 pb-4">
+        <div className="pb-4">
           {/* Personal conversations with messages */}
           {personalConversations.length > 0 && (
-            <div className="mb-4">
+            <div className="mb-2">
               <h3 className="text-muted-foreground mb-2 px-2 text-xs font-semibold">Direct Messages</h3>
               {personalConversations.map((conversation) => (
                 <ConversationItem
@@ -110,7 +110,7 @@ export function ConversationList({ conversations, users, currentUser, activeConv
 
     if (filter === "groups") {
       return (
-        <div className="space-y-1 pb-4">
+        <div className="pb-4">
           {groupConversations.length > 0 ? (
             <>
               <h3 className="text-muted-foreground mb-2 px-2 text-xs font-semibold">Group Chats</h3>
@@ -135,10 +135,10 @@ export function ConversationList({ conversations, users, currentUser, activeConv
     const displayGroups = showAllGroups ? groupConversations : groupConversations.slice(0, 3);
 
     return (
-      <div className="space-y-1 pb-4">
+      <div className="pb-4">
         {/* Pinned */}
         {pinnedConversations.length > 0 && (
-          <div className="mb-4">
+          <div className="mb-2">
             <h3 className="text-muted-foreground mb-2 px-2 text-xs font-semibold">Pinned Messages</h3>
             {pinnedConversations.map((conversation) => (
               <ConversationItem
@@ -153,7 +153,7 @@ export function ConversationList({ conversations, users, currentUser, activeConv
 
         {/* Personal chats */}
         {personalConversations.length > 0 && (
-          <div className="mb-4">
+          <div className="mb-2">
             <div className="mb-2 flex items-center justify-between px-2">
               <h3 className="text-muted-foreground text-xs font-semibold">Direct Messages</h3>
             </div>
