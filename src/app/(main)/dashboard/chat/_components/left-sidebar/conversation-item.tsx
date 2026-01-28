@@ -25,7 +25,7 @@ export function ConversationItem({ conversation, users, isActive }: Conversation
         .join(", ");
       return `${typingUserNames} ${conversation.typingUsers.length === 1 ? "is" : "are"} typing...`;
     }
-    const content = conversation.lastMessage?.content || "No messages yet";
+    const content = conversation.lastMessage?.content ?? "No messages yet";
     // Truncate to 35 characters max with ellipsis
     return content.length > 35 ? `${content.substring(0, 35)}...` : content;
   };
@@ -46,7 +46,7 @@ export function ConversationItem({ conversation, users, isActive }: Conversation
 
   return (
     <Link
-      href={`/page/chat/${conversation.id}`}
+      href={`/dashboard/chat/${conversation.id}`}
       className={cn(
         "hover:bg-accent block w-full rounded-lg p-2 text-left transition-all",
         isActive && "bg-accent",

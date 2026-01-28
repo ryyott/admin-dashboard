@@ -27,7 +27,7 @@ export function InvoiceBuilderHeader({ onSaveDraft, onSendInvoice, isSaving = fa
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/page/invoices">Invoices</Link>
+              <Link href="/dashboard/invoices">Invoices</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />

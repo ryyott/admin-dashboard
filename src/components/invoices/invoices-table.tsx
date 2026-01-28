@@ -64,7 +64,7 @@ export function InvoicesTable({ invoices, onEdit, onDuplicate, onDownload, onSen
         );
       },
       cell: ({ row }) => (
-        <Link href={`/invoices/${row.original.id}`} className="font-medium hover:underline">
+        <Link href={`/dashboard/invoices/${row.original.id}`} className="font-medium hover:underline">
           {row.getValue("number")}
         </Link>
       ),
@@ -163,7 +163,7 @@ export function InvoicesTable({ invoices, onEdit, onDuplicate, onDownload, onSen
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem asChild>
-                <Link href={`/invoices/${invoice.id}`}>
+                <Link href={`/dashboard/invoices/${invoice.id}`}>
                   <Eye className="mr-2 size-4" />
                   View
                 </Link>

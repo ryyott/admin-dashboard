@@ -42,9 +42,9 @@ export default function InvoiceViewPage({ params }: InvoiceViewPageProps) {
       <div className="container mx-auto p-6">
         <div className="flex min-h-[400px] flex-col items-center justify-center space-y-4">
           <h2 className="text-2xl font-bold">Invoice Not Found</h2>
-          <p className="text-muted-foreground">The invoice you're looking for doesn't exist.</p>
+          <p className="text-muted-foreground">The invoice you&apos;re looking for doesn&apos;t exist.</p>
           <Button asChild>
-            <Link href="/page/invoices">Back to Invoices</Link>
+            <Link href="/dashboard/invoices">Back to Invoices</Link>
           </Button>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function InvoiceViewPage({ params }: InvoiceViewPageProps) {
   }
 
   const handleEdit = () => {
-    router.push(`/page/invoices/${invoice.id}/edit`);
+    router.push(`/dashboard/invoices/${invoice.id}/edit`);
   };
 
   const handleDuplicate = () => {
@@ -84,7 +84,7 @@ export default function InvoiceViewPage({ params }: InvoiceViewPageProps) {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/page/invoices">Invoices</Link>
+                  <Link href="/dashboard/invoices">Invoices</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator>
